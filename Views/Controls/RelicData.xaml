@@ -1,0 +1,81 @@
+﻿<UserControl x:Class="NightreignRelicEditor.Views.Controls.RelicData"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:con="http://schemas.macfar.land/wpfconverters"
+             mc:Ignorable="d" d:DesignWidth="200">
+    <Border Padding="10">
+        <Grid HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/> 
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>     <!-- Header -->
+                <RowDefinition Height="Auto"/>     <!-- Effect 1 -->
+                <RowDefinition Height="Auto"/>     <!-- Curse 1 -->
+                <RowDefinition Height="Auto"/>     <!-- Effect 2 -->
+                <RowDefinition Height="Auto"/>     <!-- Curse 2 -->
+                <RowDefinition Height="Auto"/>     <!-- Effect 3 -->
+                <RowDefinition Height="Auto"/>     <!-- Curse 3 -->
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <CheckBox x:Name="CheckboxRelicActive"
+                      Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Margin="2"
+                      Content="{Binding RelicName, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                      IsChecked="{Binding IsActive, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                      FontWeight="Bold" />
+
+            <!-- Effect 1 -->
+            <Button x:Name="ButtonClearEffect1"
+                    Grid.Row="1" Grid.Column="0" Margin="2"
+                    Content="x" Width="20"/>
+            <TextBlock x:Name="TextBlockEffect1"
+                       Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="2"
+                       Text="-" TextWrapping="Wrap"/>
+            
+            <!-- Curse 1 -->
+            <Button x:Name="ButtonClearCurse1"
+                    Grid.Row="2" Grid.Column="1" Margin="2"
+                    Content="x" Width="20"/>
+            <TextBlock x:Name="TextBlockCurse1"
+                       Grid.Row="2" Grid.Column="2" Margin="2"
+                       Text="-" TextWrapping="Wrap"/>
+
+            <!-- Effect 2 -->
+            <Button x:Name="ButtonClearEffect2"
+                    Grid.Row="3" Grid.Column="0" Margin="2"
+                    Content="x" Width="20"/>
+            <TextBlock x:Name="TextBlockEffect2"
+                       Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Margin="2"
+                       Text="-" TextWrapping="Wrap"/>
+            
+            <!-- Curse 2 -->
+            <Button x:Name="ButtonClearCurse2"
+                    Grid.Row="4" Grid.Column="1" Margin="2"
+                    Content="x" Width="20"/>
+            <TextBlock x:Name="TextBlockCurse2"
+                       Grid.Row="4" Grid.Column="2" Margin="2"
+                       Text="-" TextWrapping="Wrap"/>
+
+            <!-- Effect 3 -->
+            <Button x:Name="ButtonClearEffect3"
+                    Grid.Row="5" Grid.Column="0" Margin="2"
+                    Content="x" Width="20"/>
+            <TextBlock x:Name="TextBlockEffect3"
+                       Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="2"
+                       Text="-" TextWrapping="Wrap"/>
+            
+            <!-- Curse 3 -->
+            <Button x:Name="ButtonClearCurse3"
+                    Grid.Row="6" Grid.Column="1" Margin="2"
+                    Content="x" Width="20"/>
+            <TextBlock x:Name="TextBlockCurse3"
+                       Grid.Row="6" Grid.Column="2" Margin="2"
+                       Text="-" TextWrapping="Wrap"/>
+        </Grid>
+    </Border>
+</UserControl>
